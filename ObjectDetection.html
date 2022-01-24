@@ -1,0 +1,117 @@
+<html>
+	<head>
+		<title>Machine Learning: Object Detection</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				<header id="header">
+					<h1 id="logo"><a href="index.html">Welcome</a></h1>
+					<nav id="nav">
+						<ul>
+							<li><a href="index.html">Home</a></li>
+							<li>
+								<a href="#">Projects</a>
+								<ul>
+									<li><a href="ObjectDetection.html">Machine Learning: Object Detection</a></li>
+									<!--<li><a href="right-sidebar.html">Right Sidebar</a></li>-->
+									<!--<li><a href="no-sidebar.html">No Sidebar</a></li>	-->								
+								</ul>
+							</li>
+							<li><a href="elements.html">Elements</a></li>							
+						</ul>
+					</nav>
+				</header>
+
+			<!-- Main -->
+				<div id="main" class="wrapper style1">
+					<div class="container">
+						<header class="major">
+							<h2>Machine Learning: Object Detection</h2>
+							
+						</header>
+						<div class="row gtr-150">
+							<div class="col-4 col-12-medium">
+
+								<!-- Sidebar -->
+									<section id="sidebar">
+										<section>
+											<h3>Object Detection with Deep Learning</h3>
+											<p>Extracting information from massive data using deep learning. Automate the process of detecting objects and identifying features from imagery. Preparing training sample data, then use a neural network to train an object detection model.</p>
+											
+										</section>
+										<hr />
+										
+									</section>
+
+							</div>
+							<div class="col-8 col-12-medium imp-medium">
+
+								<!-- Content -->
+									<section id="content">
+										
+										
+										<p>Tax assessors at local government agencies often rely on surveys to estimate property value and calculate property taxes. These surveys are infrequent, which means that there can be some inaccuracy in the assessment records. Swimming pools are an important part of these assessments because they impact the value of the property. To reduce labour hours, I use ArcGIS deep learning tools to detect all swimming pools in a defined area. This information will help tax assessors identify more appropriate values and taxes, which can lead to additional revenue for the community. 
+										<br>
+										<br>
+										I first open an imagery file that shows a false-colour imagery of the interested area. This false-colour uses an infrared band to visualize vegetation in red.
+										</p>
+										<a href="#" class="image fit"><img src="images/object-detection-infrared.png" alt="" /></a>
+									
+										<p>From the imagery tab, I open Label Objects for Deep Learning tool. Using the point option I then digitize a few pools for training samples. These point are then defined as pool with a value of 0.</p>
+										<a href="#" class="image fit"><img src="images/object-detection-testing-data.png" alt="" /></a>
+										<a href="#" class="image fit"><img src="images/object-detection-testing-data1-1.png" alt="" /></a>
+										<p>
+										In the next step, I will export the training samples into image chips, which use the training sample locations to cut, or chip, the source imagery into defined sub-images that will contain a training sample. These image chips will be used to train the object detection deep learning model.
+										</p>
+										<p>
+										Using Export Training Data for Deep Learning tool, I exported over a thousand image chips that will be used to train the model. To train the model, I must install specific Python packages. In this step, I will use the Deep Learning Libraries Installer for ArcGIS Pro 2.8 to install the Python packages required to train my deep learning object detection model. When installed, I run the Train Deep Learning Model (Image Analyst Tools) tool with the image chips I exported earlier. 
+										</p>
+										<p>
+										The Train Deep Learning Model tool trains a deep learning model and updates the model definition file (.emd) with this information. I can use this model definition file to detect, or infer, the location of the remaining swimming pools. By reviewing the results, I can assess the model accuracy to determine if I should modify the model or proceed with my analysis. Comparing the ground truth images with the predicted images will also help me determine the accuracy of my model. This model provides a good baseline, predicting most of the pools identified in the ground truth. 
+										</p>
+										<p>
+										After the model is trained, I will perform inferencing. Inferencing uses the trained model to extract information from my imagery. In the Geoprocessing pane, I open the Detect Objects Using Deep Learning (Image Analyst Tools) tool. 
+										</p>
+										<a href="#" class="image fit"><img src="images/pool.png" alt="" /></a>
+										<p>
+										Using this model, I can quickly detect the remaining swimming pools, providing tax assessors with the information that they need to identify more accurate property values and taxes.
+										</p>
+									</section>
+
+							</div>
+						</div>
+					</div>
+				</div>
+
+			<!-- Footer -->
+				<footer id="footer">
+					<ul class="icons">					
+						<li><a href="https://ca.linkedin.com/in/licyrus" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+						<li><a href="https://cyrusgis.github.io" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+						<li><a href="mailto:kwanlokli@gmail.com" class="icon solid alt fa-envelope"><span class="label">Email</span></a></li>
+					</ul>
+					<ul class="copyright">
+						
+					</ul>
+				</footer>
+
+		</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.dropotron.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

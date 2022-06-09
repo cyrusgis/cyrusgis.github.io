@@ -1,0 +1,121 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Detect Patterns</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				<header id="header">
+					<!--<h1 id="logo"><a href="index.html">Welcome</a></h1>-->
+					<nav id="nav">
+						<ul>
+							<li><a href="index.html">Home</a></li>
+							<li>
+								<a href="#">Projects</a>
+								<ul>
+									<li><a href="ObjectDetection.html">Machine Learning: Object Detection</a></li>
+									<li><a href="USAPopulation.html">USA Population Analysis</a></li>
+									<li><a href="GoogleMapAPI.html">Google Map API</a></li>
+									<li><a href="LeafletMap.html">Leaflet Map</a></li>
+                  <li><a href="DataVisualization.html">Data Visualization</a></li>
+                  <li><a href="DetectPatterns.html">Detect Patterns</a></li>
+								</ul>
+							</li>
+							<li><a href="curriculum-vitae.html">Curriculum Vitae</a></li>						
+						</ul>
+					</nav>
+				</header>
+
+			<!-- Main -->
+				<div id="main" class="wrapper style1">
+					<div class="container">
+						<header class="major">
+							<h2>Spatial Data Science: Detect Patterns</h2>
+							
+						</header>
+						<div class="row gtr-150">
+							<div class="col-4 col-12-medium">
+
+								<!-- Sidebar -->
+									<section id="sidebar">
+										<section>
+											<h3>Detect Patterns</h3>
+											<p>Statistical cluster analysis minimizes subjectivity in maps by identifying meaningful clusters in the data. The Hot Spot Analysis and Outlier Analysis tools use statistics to detect spatial patterns in the data, but each provides slightly different information about these patterns.</p>
+											
+										</section>
+										<hr />
+										
+									</section>
+
+							</div>
+							<div class="col-8 col-12-medium imp-medium">
+
+								<!-- Content -->
+									<section id="content">
+										
+										
+										<p>Hot Spot Analysis uses the Getis-Ord Gi* statistic to identify statistically significant spatial clusters of high values (hot spots) and low values (cold spots).
+										<br>
+										<br>
+										Outlier Analysis uses the Anselin Local Moran's I statistic to identify statiscally significant clusters of high and low values and to detect spatial outliers, or features with values significantly dissimilar from their neighbours.
+                    <br>
+                    This project aims to find meaningful patterns of high and low Supplemental Nutrition Assistance Program (SNAP) participation. This information help decision makers distribute resources more efficiently and equitably. <br>
+                    <b>Run a Hot Spot Analysis</b>
+                    Open Optimized Hot Spot Analysis. For Analysis Field use SNAPRate, which is the rate of SNAP participation in each county.  
+										</p>
+										<a href="#" class="image fit"><img src="images/DetectPatterns1.JPG" alt="Detect Pattern Image" /></a>
+									
+										<p>The default distance band of 150km was chosen. In this project this may not be applicable since we are analyzing a more local pattern. We can therefore change the distance band to 75km to detect more local patterns in this county level dataset. </p>
+										<a href="#" class="image fit"><img src="images/DetectPatterns2.JPG" alt="Detect Pattern Image" /></a>
+										
+										<p>
+										The output is more appropriate for our analysis.
+										</p>
+										<p>
+                    <b>Run an Outlier Analysis</b><br>
+                    Open the Optimized Outlier Analysis tool. Same input as Hot Spot Analysis. Update distance band to 75km.                   
+                    </p>
+                    <a href="#" class="image fit"><img src="images/DetectPatterns3.JPG" alt="Detect Pattern Image" /></a>
+										<p>
+										The bright red and blue features represent spatial outliers. Features with high values surrounded by areas with low values are called High-Low outliers and are displayed in red. Features with low values surrounded by areas with high values are called Low-High outliers and are displayed in blue. The pink and light blue colours indicate clusters of features with statistically significantly high values (pink) and statistically significantly low values (light blue). These clusters typically align with the hot and cold spots from the Optimized Hot Spot Analysis tool. 
+                    </p>
+									</section>
+
+							</div>
+						</div>
+					</div>
+				</div>
+
+			<section id="five" class="wrapper style2 special fade">
+				<div class="container">
+					<header>
+						<h2>Contact</h2>
+						<p>Feel free to connect with me</p>
+					</header>
+					<ul class="icons">					
+					<li><a href="https://ca.linkedin.com/in/licyrus" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+					<li><a href="https://cyrusgis.github.io" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+					<li><a href="mailto:cyrusli.gis@gmail.com" class="icon solid alt fa-envelope"><span class="label">Email</span></a></li>
+				</ul>
+				</div>
+			</section>
+		</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.dropotron.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
